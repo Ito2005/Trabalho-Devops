@@ -13,7 +13,7 @@ spec:
             app: Trabalho-Devops
         spec:
         containers:
-        - name: Trabalho-Devops
+          - name: Trabalho-Devops
             image: Ito2005/Trabalho-Devops-k8s
             ports:
             - containerPort: 8000

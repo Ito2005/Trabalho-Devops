@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Trabalho-Devops
+  name: trabalho-devops
 spec:
     replicas: 3
     selector:
         matchLabels:
-        app: Trabalho-Devops
+        app: trabalho-devops
     template:
         metadata:
         labels:
-            app: Trabalho-Devops
+            app: trabalho-devops
         spec:
         containers:
-          - name: Trabalho-Devops
-            image: Ito2005/Trabalho-Devops-k8s
+          - name: trabalho-devops
+            image: Ito2005/trabalho-devops-k8s
             ports:
             - containerPort: 8000

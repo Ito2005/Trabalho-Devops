@@ -29,8 +29,8 @@ jobs:
           context: .
           push: true
           tags: |
-            Ito2005/trabalho-devops-main-k8s:latest
-            Ito2005/trabalho-devops-main-k8s:${{ github.sha }}
+            Ito2005/trabalho-devops-k8s:latest
+            Ito2005/trabalho-devops-k8s:${{ github.sha }}
 
       - name: Setup Kustomize
         uses: imranismail/setup-kustomize@v2
@@ -38,7 +38,7 @@ jobs:
       - name: Update kustomization.yaml
         run: |
           cd k8s
-          kustomize edit set image trabalho-devops-main=Ito2005/trabalho-devops-main-k8s:$GITHUB_SHA
+          kustomize edit set image trabalho-devops=Ito2005/trabalho-devops-k8s:$GITHUB_SHA
 
       - name: Commit changes
         run: |

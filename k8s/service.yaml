@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: trabalho-devops-main-service
+  name: trabalho-devops-service
 spec:
   selector:
-    app: trabalho-devops-main
+    app: trabalho-devops
   ports:
     - protocol: TCP
       port: 80

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: trabalho-devops
-          image: ito2005/trabalho-devops
+          image: ito2005/ito2005
           ports:
             - containerPort: 8000
 

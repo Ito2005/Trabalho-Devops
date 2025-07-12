@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: trabalho-devops
 spec:
-    replicas: 3
-    selector:
-        matchLabels:
-        app: trabalho-devops
+  replicas: 3
+  selector:
+    matchLabels:
+      app: trabalho-devops
     template:
-        metadata:
+      metadata:
         labels:
-            app: trabalho-devops
-        spec:
+          app: trabalho-devops
+      spec:
         containers:
           - name: trabalho-devops
-            image: Ito2005/trabalho-devops-main
+            image: Ito2005/trabalho-devops
             ports:
             - containerPort: 8000

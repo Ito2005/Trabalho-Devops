@@ -5,5 +5,5 @@ resources:
   - service.yaml
 images:
   - name: trabalho-devops
-    newName: Ito2005/trabalho-devops-main-k8s
+    newName: Ito2005/trabalho-devops-k8s
     newTag: c58b625834eb8b45c0d3d3b45ba4cbc288fc5146

@@ -6,11 +6,11 @@ spec:
     replicas: 3
     selector:
         matchLabels:
-        app: trabalho-devops-main
+        app: trabalho-devops
     template:
         metadata:
         labels:
-            app: trabalho-devops-main
+            app: trabalho-devops
         spec:
         containers:
         - name: trabalho-devops

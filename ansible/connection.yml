@@ -1,0 +1,29 @@
+- name: Baixar imagem do backend
+  docker_image:
+    name: ito2005/backend:latest
+    source: pull
+
+- name: Rodar container do backend
+  docker_container:
+    name: backend
+    image: ito2005/backend:latest
+    state: started
+    restart_policy: always
+    ports:
+      - "2200:2200"
+
+- name: Baixar imagem do frontend
+  docker_image:
+    name: ito2005/frontend:latest
+    source: pull
+
+- name: Rodar container do frontend e conectar com backend
+  docker_container:
+    name: frontend
+    image: ito2005/frontend:latest
+    state: started
+    restart_policy: always
+    ports:
+      - "2222:2222"
+    env:
+      BACKEND_URL: "http://191.52.55.137:2200"

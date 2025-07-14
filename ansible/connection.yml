@@ -10,7 +10,7 @@
     state: started
     restart_policy: always
     ports:
-      - "2200:2200"
+      - "8000:8000"
 
 - name: Baixar imagem do frontend
   docker_image:
@@ -24,6 +24,6 @@
     state: started
     restart_policy: always
     ports:
-      - "2222:2222"
+      - "8000:8080"
     env:
-      BACKEND_URL: "http://191.52.55.137:2200"
+      BACKEND_URL: "http://191.52.55.137:8080"
